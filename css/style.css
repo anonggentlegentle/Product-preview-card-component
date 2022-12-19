@@ -35,17 +35,16 @@ video {
   max-width: 60rem;
   border-radius: 1.5rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 @media only screen and (max-width: 50em) {
   .container {
-    flex-direction: column;
     margin: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .container__details {
-  width: 50%;
   padding: 3rem;
   color: hsl(228deg, 12%, 48%);
   background-color: hsl(0deg, 0%, 100%);
@@ -55,16 +54,7 @@ video {
 }
 @media only screen and (max-width: 50em) {
   .container__details {
-    width: 100%;
     padding: 2.5rem;
-  }
-}
-.container__photo {
-  width: 50%;
-}
-@media only screen and (max-width: 50em) {
-  .container__photo {
-    width: 100%;
   }
 }
 .container__sub {

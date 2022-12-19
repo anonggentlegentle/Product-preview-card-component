@@ -47,16 +47,15 @@ video {
   border-radius: 1.5rem;
   overflow: hidden;
 
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 
   @media only screen and (max-width: $bp-1) {
-    flex-direction: column;
     margin: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   &__details {
-    width: 50%;
     padding: 3rem;
     color: $color-blue-grey;
     background-color: $color-white;
@@ -66,16 +65,7 @@ video {
     row-gap: 2.5rem;
 
     @media only screen and (max-width: $bp-1) {
-      width: 100%;
       padding: 2.5rem;
-    }
-  }
-
-  &__photo {
-    width: 50%;
-
-    @media only screen and (max-width: $bp-1) {
-      width: 100%;
     }
   }
 
